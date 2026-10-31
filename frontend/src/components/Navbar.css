@@ -1,0 +1,408 @@
+/* ==========================================================================
+   Scrollix AI - Top Navigation Bar Responsive Stylesheet
+   ========================================================================== */
+
+/* Main Header Container */
+.navbar-header {
+  margin: 8px 16px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  z-index: 100;
+  box-sizing: border-box;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* Brand Section */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.navbar-logo-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+  flex-shrink: 0;
+}
+
+.navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-brand-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.brand-ai {
+  color: var(--accent-cyan);
+}
+
+.brand-version {
+  font-size: 9px;
+  padding: 1px 4px;
+  border-radius: 10px;
+  background: rgba(6, 182, 212, 0.15);
+  color: #38bdf8;
+  font-weight: 700;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.navbar-brand-subtitle {
+  font-size: 9.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  letter-spacing: -0.1px;
+}
+
+/* Navigation Tabs Section */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.navbar-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 11.5px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+  user-select: none;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.nav-tab-btn:hover {
+  color: #f9fafb;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+.nav-tab-btn.active {
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  color: #38bdf8;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.12);
+}
+
+.nav-tab-icon {
+  flex-shrink: 0;
+}
+
+/* Right Controls Section */
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Location Badge */
+.navbar-location-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px 8px;
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.navbar-location-badge:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.location-city-text {
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.location-tag {
+  font-size: 9px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+.location-tag.gps {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.location-tag.manual {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+/* Health Badge */
+.navbar-health-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  padding: 4px 7px;
+  border-radius: 6px;
+  user-select: none;
+  white-space: nowrap;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.health-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.health-dot.online {
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+.health-dot.syncing {
+  background: #ef4444;
+}
+
+.health-text {
+  color: #34d399;
+}
+
+/* Role Switcher Container */
+.navbar-role-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2px 3px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+}
+
+.role-btn {
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.role-btn:hover {
+  color: #f9fafb;
+}
+
+.role-shopper.active {
+  background: var(--accent-blue);
+  color: white;
+}
+
+.role-merchant.active {
+  background: var(--accent-purple);
+  color: white;
+}
+
+.role-admin.active {
+  background: var(--accent-rose);
+  color: white;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Ultra-wide & Large Desktop (>= 1500px, e.g. 1600px, 1920px, 2560px) */
+@media (min-width: 1500px) {
+  .navbar-header {
+    margin: 10px 20px;
+    padding: 10px 20px;
+    gap: 16px;
+  }
+  .navbar-nav {
+    gap: 5px;
+  }
+  .nav-tab-btn {
+    padding: 6px 11px;
+    font-size: 12.5px;
+    gap: 6px;
+  }
+  .location-city-text {
+    max-width: 110px;
+  }
+}
+
+/* Standard Desktop (1351px - 1499px, e.g. 1366px, 1440px) */
+@media (max-width: 1499px) and (min-width: 1351px) {
+  .navbar-header {
+    margin: 8px 14px;
+    padding: 8px 14px;
+    gap: 10px;
+  }
+  .navbar-brand-subtitle {
+    display: none;
+  }
+  .navbar-nav {
+    gap: 3px;
+  }
+  .nav-tab-btn {
+    padding: 5px 8px;
+    font-size: 11.5px;
+  }
+  .location-city-text {
+    max-width: 80px;
+  }
+}
+
+/* Medium Desktop (1266px - 1350px, e.g. 1280px, 1330px) - Compact Single Row with Generous Clearance */
+@media (max-width: 1350px) and (min-width: 1266px) {
+  .navbar-header {
+    margin: 6px 12px;
+    padding: 6px 12px;
+    gap: 8px;
+  }
+  .navbar-brand-subtitle {
+    display: none;
+  }
+  .navbar-controls {
+    gap: 5px;
+  }
+  .navbar-location-badge {
+    padding: 3px 6px;
+    font-size: 10.5px;
+    gap: 4px;
+  }
+  .location-city-text {
+    max-width: 58px;
+  }
+  .navbar-nav {
+    gap: 2px;
+  }
+  .nav-tab-btn {
+    padding: 4px 5px;
+    font-size: 11px;
+    gap: 3px;
+  }
+  .role-btn {
+    padding: 3px 5px;
+    font-size: 10.5px;
+  }
+}
+
+/* Compact Desktop & Tablet (<= 1265px, e.g. 900px, 1024px, 1150px, 1200px, 1250px) - Two-Row Clean Layout */
+@media (max-width: 1265px) {
+  .navbar-header {
+    flex-wrap: wrap;
+    row-gap: 8px;
+    padding: 8px 14px;
+    margin: 8px 12px;
+  }
+  .navbar-brand {
+    order: 1;
+  }
+  .navbar-controls {
+    order: 2;
+  }
+  .navbar-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 6px;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .nav-tab-btn {
+    padding: 5px 9px;
+    font-size: 11.5px;
+  }
+}
+
+/* Mobile Screens (< 640px) */
+@media (max-width: 640px) {
+  .navbar-header {
+    margin: 6px 8px;
+    padding: 6px 10px;
+  }
+  .navbar-brand-subtitle {
+    display: none;
+  }
+  .navbar-controls {
+    gap: 5px;
+  }
+  .location-city-text {
+    max-width: 60px;
+  }
+  .navbar-role-switcher .role-btn {
+    padding: 3px 6px;
+    font-size: 10.5px;
+  }
+  .nav-tab-btn {
+    padding: 4px 7px;
+    font-size: 11px;
+    gap: 3px;
+  }
+}

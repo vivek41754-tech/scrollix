@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Distribution / packaging
+build/
+dist/
+backend_dist/
+backend/build/
+backend/dist/
+desktop/dist/
+frontend/dist/
+*.spec
+
+# Unit test / coverage reports
+.pytest_cache/
+backend/.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Frontend / Electron dependencies
+node_modules/
+frontend/node_modules/
+desktop/node_modules/
+
+# Logs and databases
+*.log
+*.db
+*.db.bak
+*.db.backup
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary files
+temp_*
+*.tmp

@@ -1,0 +1,8 @@
+const { contextBridge, ipcRenderer } = require('electron');
+
+contextBridge.exposeInMainWorld('electronAPI', {
+  platform: process.platform,
+  version: process.versions.electron,
+  nodeVersion: process.versions.node,
+  getDeviceLocation: () => ipcRenderer.invoke('get-device-location')
+});

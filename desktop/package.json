@@ -1,0 +1,17 @@
+{
+  "name": "scrollix-ai-desktop",
+  "version": "1.0.0",
+  "description": "Scrollix AI - Intelligent Social Commerce & Location-Aware Video Recommendations",
+  "main": "main.js",
+  "author": "Scrollix AI Team",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . \"Scrollix AI\" --platform=win32 --arch=x64 --out=../dist --overwrite --asar"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-packager": "^17.1.2"
+  }
+}
