@@ -64,10 +64,8 @@
 
 | Particular | Details |
 | :--- | :--- |
-| **Video URL** | {{Video URL}} |
-| **Duration** | {{mm:ss}} |
-
-*(Note: Left for the student to insert video URL and duration independently.)*
+| **Video URL** | [https://drive.google.com/file/d/1D8WOmH4sjDmFTlU2tX3bXGIpTfDXS7-6/view?usp=drivesdk](https://drive.google.com/file/d/1D8WOmH4sjDmFTlU2tX3bXGIpTfDXS7-6/view?usp=drivesdk) |
+| **Duration** | 1 min 30 seconds (01:30) |
 
 ### Technical Stack
 

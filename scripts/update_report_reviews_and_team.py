@@ -115,6 +115,18 @@ def update_document(docx_path):
     for run in p10.runs:
         style_run(run, size_pt=12, bold=True)
 
+    # 1.5. Table 3: Demo Video (Clickable Google Drive Link & Duration)
+    t3 = doc.tables[3]
+    set_cell_text(t3.rows[1].cells[0], "Video URL", bold=True, size_pt=10.5, align=WD_ALIGN_PARAGRAPH.LEFT)
+    set_cell_hyperlink(
+        t3.rows[1].cells[1],
+        "https://drive.google.com/file/d/1D8WOmH4sjDmFTlU2tX3bXGIpTfDXS7-6/view?usp=drivesdk",
+        "https://drive.google.com/file/d/1D8WOmH4sjDmFTlU2tX3bXGIpTfDXS7-6/view?usp=drivesdk",
+        size_pt=9.5
+    )
+    set_cell_text(t3.rows[2].cells[0], "Duration", bold=True, size_pt=10.5, align=WD_ALIGN_PARAGRAPH.LEFT)
+    set_cell_text(t3.rows[2].cells[1], "1 min 30 seconds (01:30)", bold=False, size_pt=10.5, align=WD_ALIGN_PARAGRAPH.LEFT)
+
     # 2. Table 6: Division of Work and Skills
     t6 = doc.tables[6]
     set_cell_text(t6.rows[1].cells[0], "1", bold=False, size_pt=10, align=WD_ALIGN_PARAGRAPH.CENTER)
